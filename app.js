@@ -7,8 +7,7 @@ app.directive('makeEditable', function() {
 		transclude: true,
 		scope: true,
 		link: function(scope, element, attrs) {
-			let editableElement = angular.element(document.getElementById('editable'));
-			console.log(editableElement.attr('contenteditable'));
+			let editableElement = angular.element(element.children()[0]);
 
 			scope.editable = false;
 			scope.button = {
