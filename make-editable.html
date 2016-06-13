@@ -1,4 +1,2 @@
-<div contenteditable="false" ng-class="{ red: editable }">
-	<span ng-transclude></span>
-</div>
-<button>{{ button.action }}</button>
+<span id="editable" contenteditable="false" ng-class="{ red: editable }" ng-transclude></span>
+<button ng-click="toggleEditability()">{{ button.action }}</button>
