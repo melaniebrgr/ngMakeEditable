@@ -5,6 +5,7 @@ app.directive('makeEditable', function() {
 		restrict: 'A',
 		templateUrl: 'make-editable.html',
 		transclude: true,
+		scope: true,
 		link: function(scope, element, attrs) {
 			let editableElement = angular.element(document.getElementById('editable'));
 			console.log(editableElement.attr('contenteditable'));
@@ -35,4 +36,4 @@ app.directive('makeEditable', function() {
 // -|-on button click, toggle editability
 // -|-on button click, change button text
 // -|-when editable, apply red class
-// --include attribute on at least two DOM elements
+// -|-include attribute on at least two DOM elements
